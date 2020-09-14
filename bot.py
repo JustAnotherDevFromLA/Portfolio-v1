@@ -17,7 +17,7 @@ api = tweepy.API(auth)
 
 print(api)
 
-target = "mhovakimian"
+target = "RTErdogan"
 mentions = api.home_timeline()
 
 for mention in mentions:
@@ -43,8 +43,9 @@ last_seen_id = retriev_last_seen_id(FILE_NAME)
 def reply_to_tweets():
 
     counter = random.randint(1,1000)
-    api.update_status('@'+target +" Gyot Es!!!" +str(counter))
+    api.update_status('@'+target +" Recognize the Armenian Genocide! #tukeyisguilty " +str(counter))
     
 while True:
+    print("Tweeting...")
     reply_to_tweets()
-    time.sleep(1)
+    time.sleep(300)
